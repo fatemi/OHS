@@ -1,0 +1,24 @@
+Digraph G {
+orientation = landscape;
+rankdir = LR;
+margin="0.25,0.25";
+size="11,8.5";
+center="True";
+
+"[[[e],[s]],1]" -> "[[[s,[alpha,0]],[s]],1]"[label = "beta"];
+"[[[e],[s]],1]" -> "[[[e],[s]],1]"[label = "tick"];
+"[[[s,[alpha,0]],[e]],1]" -> "[[[s,[alpha,0]],[s]],1]"[label = "delta"];
+"[[[s,[alpha,0]],[e]],1]" -> "[[[s,[alpha,1]],[e]],1]"[label = "tick"];
+"[[[s,[alpha,0]],[s]],1]" -> "[[[s,[alpha,0]],[e]],1]"[label = "gamma"];
+"[[[s,[alpha,0]],[s]],1]" -> "[[[s,[alpha,1]],[s]],1]"[label = "tick"];
+"[[[s,[alpha,1]],[e]],1]" -> "[[[s,[alpha,1]],[s]],1]"[label = "delta"];
+"[[[s,[alpha,1]],[s]],1]" -> "[[[s,[alpha,1]],[e]],1]"[label = "gamma"];
+"[[[s,[alpha,1]],[s]],1]" -> "[[[s,[alpha,2]],[s]],1]"[label = "tick"];
+"[[[s,[alpha,2]],[s]],1]" -> "[[[e],[s]],1]"[label = "alpha"];
+"[[[s,[alpha,2]],[s]],1]" -> "[[[s,[alpha,2]],[s]],1]"[label = "tick"];
+"START" -> "[[[s,[alpha,0]],[s]],1]";
+"START"[color=white,fontcolor=white];
+"[[[s,[alpha,0]],[s]],1]"[shape=doubleoctagon];
+"[[[s,[alpha,1]],[s]],1]"[shape=doubleoctagon];
+"[[[s,[alpha,2]],[s]],1]"[shape=doubleoctagon];
+}
